@@ -6,7 +6,7 @@ import neopixel
  
 # Choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D18
 # NeoPixels must be connected to D10, D12, D18 or D21 to work.
-pixel_pin = board.D12
+pixel_pin = board.D21
  
 # The number of NeoPixels
 num_pixels = 64
@@ -54,7 +54,7 @@ def rainbow_cycle(wait):
 while True:
     # Comment this line out if you have RGBW/GRBW NeoPixels
     pixels.fill((255, 0, 0))
-    print ('fill')
+    print ('fill red')
     # Uncomment this line if you have RGBW/GRBW NeoPixels
     # pixels.fill((255, 0, 0, 0))
     pixels.show()
@@ -62,7 +62,7 @@ while True:
  
     # Comment this line out if you have RGBW/GRBW NeoPixels
     pixels.fill((0, 255, 0))
-    print('fill again')
+    print('fill green')
     # Uncomment this line if you have RGBW/GRBW NeoPixels
     # pixels.fill((0, 255, 0, 0))
     pixels.show()
@@ -70,9 +70,10 @@ while True:
  
     # Comment this line out if you have RGBW/GRBW NeoPixels
     pixels.fill((0, 0, 255))
+    print('fill blue')
     # Uncomment this line if you have RGBW/GRBW NeoPixels
     # pixels.fill((0, 0, 255, 0))
     pixels.show()
     time.sleep(1)
- 
+    print('rainbow time!')
     rainbow_cycle(0.001)  # rainbow cycle with 1ms delay per step
